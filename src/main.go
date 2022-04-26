@@ -12,7 +12,7 @@ import (
 )
 
 func main () {
-	l := log.New(os.Stdout, "product-api", log.LstdFlags)
+	l := log.New(os.Stdout, "greetings-api", log.LstdFlags)
 
 	// creates an end point "object"
 	hello_handler := handlers.NewHello(l)
