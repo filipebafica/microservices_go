@@ -47,7 +47,7 @@ func main () {
 	sig := <- sigChan
 	l.Println("Recieved terminate, graceful shutdown\n", sig)
 
-	// waits until all current requests finishes before a server shoutdown happen
+	// waits until all current requests finishes before a server shutdown happen
 	ctx, _ := context.WithTimeout(context.Background(), 30 * time.Second)
 	server.Shutdown(ctx)
 }
